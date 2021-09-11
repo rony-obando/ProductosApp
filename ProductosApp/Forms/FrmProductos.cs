@@ -115,6 +115,7 @@ Caducidad: {P.Vencimiento}{Environment.NewLine}
 Unidad de medida: {P.UnidadMedida}{Environment.NewLine}{Environment.NewLine}" + mostrar;
             }
             rtbProductView.Text = "";
+            rtbProductView.Text = mostrar;
         }
         private void Mostrar(Producto P)
         {
