@@ -96,30 +96,7 @@ namespace Infrastructure.Productos
             int index = Array.BinarySearch(productos, p, new Producto.ProductoIdCompare());
             return index < 0 ? null : productos[index];
         }
-        public Producto[] DeleteBy(Producto P)
-        {
-            int index = GetIndexById(P);
-            Producto[] tmp = new Producto[productos.Length - 1];
-            int j = 0;
-            for (int i = 0; i < productos.Length; i++)
-            {
-                tmp[j] = productos[i];
-                if (j == tmp.Length - 1)
-                {
-                    break;
-                }
-                if (i == index)
-                {
-                    tmp[j] = productos[i + 1];
-                    i++;
-                }
-                j++;
-            }
-            productos = new Producto[tmp.Length];
-            productos = tmp;
-            return productos;
-
-        }
+        
         public Producto[] GetProductosByUnidadMedida(UnidadMedida um)
         {
             Producto[] tmp = null;
