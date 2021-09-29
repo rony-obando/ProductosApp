@@ -44,7 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Empleados\Administrativo.cs" />
+    <Compile Include="Entities\Empleados\Docente.cs" />
+    <Compile Include="Entities\Empleados\Empleado.cs" />
     <Compile Include="Entities\Producto.cs" />
+    <Compile Include="Enums\CategoriaDocente.cs" />
     <Compile Include="Enums\UnidadMedida.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
