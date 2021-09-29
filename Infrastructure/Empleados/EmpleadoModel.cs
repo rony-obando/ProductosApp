@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Domain.Entities.Empleados;
 
-namespace Infrastructure.Empleado
+namespace Infrastructure.Empleados
 {
     public class EmpleadoModel
     {
@@ -26,7 +26,7 @@ namespace Infrastructure.Empleado
         }
         public int GetlastEmpleadoId()
         {
-            return empleados == null ? 0 : empleados[empleados.Length - 1].Id;
+            return empleados == null ? 0 : empleados[empleados.Length - 1].ID;
         }
         public Empleado[] GetEmpleados()
         {

@@ -1,5 +1,5 @@
 ﻿using Domain.Entities.Empleados;
-using Infrastructure.Empleado;
+using Infrastructure.Empleados;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,23 +24,25 @@ namespace ProductosApp.Forms
 
         private void BtnDocente_Click(object sender, EventArgs e)
         {
-            Empleado emp = new Docente(100., "001-000000-0000U", "Pepito Jose", "Perez Zosa", 23789.98M, DateTime.Now) {
+            Empleado emp = new Docente(100, "001-000000-0000U", "Pepito Jose", "Perez Zosa", 23789.98M, DateTime.Now) {
                 categoriaDocente = Domain.Enums.CategoriaDocente.Titular,
                 ID=empleadoModel.GetlastEmpleadoId()+1
             };
 
             empleadoModel.Create(emp);
+            PrintEmpleado();
         }
 
         private void BtnAdmin_Click(object sender, EventArgs e)
         {
-            Empleado emp = new Administrativo(100, "001-000000-0000U", "Pepito Jose", "Perez Zosa", 23789.98M, DateTime.Now)
+            Empleado emp = new Administrativo(100, "001-000000-0000U", "Maria Jose", "Obando Rodriguez", 23789.98M, DateTime.Now)
             {
                 HorasExtras=23.5f,
                 ID = empleadoModel.GetlastEmpleadoId() + 1
             };
 
             empleadoModel.Create(emp);
+            PrintEmpleado();
         }
         private void PrintEmpleado()
         {
