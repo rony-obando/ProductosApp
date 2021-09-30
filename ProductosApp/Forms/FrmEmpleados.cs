@@ -24,24 +24,23 @@ namespace ProductosApp.Forms
 
         private void BtnDocente_Click(object sender, EventArgs e)
         {
-            Empleado emp = new Docente(100, "001-000000-0000U", "Pepito Jose", "Perez Zosa", 23789.98M, DateTime.Now) {
-                categoriaDocente = Domain.Enums.CategoriaDocente.Titular,
-                ID=empleadoModel.GetlastEmpleadoId()+1
-            };
-
-            empleadoModel.Create(emp);
+            FrmEmpleado si = new FrmEmpleado(empleadoModel,1);
+            si.ShowDialog();
             PrintEmpleado();
+            
         }
 
         private void BtnAdmin_Click(object sender, EventArgs e)
         {
-            Empleado emp = new Administrativo(100, "001-000000-0000U", "Maria Jose", "Obando Rodriguez", 23789.98M, DateTime.Now)
+            /*Empleado emp = new Administrativo(100, "001-000000-0000U", "Maria Jose", "Obando Rodriguez", 23789.98M, DateTime.Now)
             {
                 HorasExtras=23.5f,
                 ID = empleadoModel.GetlastEmpleadoId() + 1
             };
 
-            empleadoModel.Create(emp);
+            empleadoModel.Create(emp);*/
+            FrmEmpleado si = new FrmEmpleado(empleadoModel, 0);
+            si.ShowDialog();
             PrintEmpleado();
         }
         private void PrintEmpleado()
@@ -49,13 +48,19 @@ namespace ProductosApp.Forms
             Empleado[] empleados = empleadoModel.GetEmpleados();
             if (empleados == null)
             {
-                MessageBox.Show("Esta Vacio");
+                //MessageBox.Show("Esta Vacio");
                 return;
             }
+            richTextBox1.Text = "";
             foreach(Empleado e in empleados)
             {
                 richTextBox1.AppendText(e.GetEmpleadoAsString());
             }
+        }
+
+        private void FrmEmpleados_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

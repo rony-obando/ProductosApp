@@ -55,9 +55,9 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(12, 213);
+            this.richTextBox1.Location = new System.Drawing.Point(12, 103);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(767, 213);
+            this.richTextBox1.Size = new System.Drawing.Size(776, 335);
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "";
             // 
@@ -71,6 +71,7 @@
             this.Controls.Add(this.btnDocente);
             this.Name = "FrmEmpleados";
             this.Text = "FrmEmpleados";
+            this.Load += new System.EventHandler(this.FrmEmpleados_Load);
             this.ResumeLayout(false);
 
         }
