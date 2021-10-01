@@ -31,13 +31,14 @@
             this.btnDocente = new System.Windows.Forms.Button();
             this.btnAdmin = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.btnMostrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnDocente
             // 
-            this.btnDocente.Location = new System.Drawing.Point(80, 58);
+            this.btnDocente.Location = new System.Drawing.Point(12, 58);
             this.btnDocente.Name = "btnDocente";
-            this.btnDocente.Size = new System.Drawing.Size(189, 23);
+            this.btnDocente.Size = new System.Drawing.Size(127, 23);
             this.btnDocente.TabIndex = 0;
             this.btnDocente.Text = "Crear Docente";
             this.btnDocente.UseVisualStyleBackColor = true;
@@ -45,9 +46,9 @@
             // 
             // btnAdmin
             // 
-            this.btnAdmin.Location = new System.Drawing.Point(381, 58);
+            this.btnAdmin.Location = new System.Drawing.Point(186, 58);
             this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(234, 23);
+            this.btnAdmin.Size = new System.Drawing.Size(127, 23);
             this.btnAdmin.TabIndex = 1;
             this.btnAdmin.Text = "Crear Administrativo";
             this.btnAdmin.UseVisualStyleBackColor = true;
@@ -61,11 +62,22 @@
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "";
             // 
+            // btnMostrar
+            // 
+            this.btnMostrar.Location = new System.Drawing.Point(364, 58);
+            this.btnMostrar.Name = "btnMostrar";
+            this.btnMostrar.Size = new System.Drawing.Size(112, 23);
+            this.btnMostrar.TabIndex = 3;
+            this.btnMostrar.Text = "Mostrar";
+            this.btnMostrar.UseVisualStyleBackColor = true;
+            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
+            // 
             // FrmEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.btnAdmin);
             this.Controls.Add(this.btnDocente);
@@ -81,5 +93,6 @@
         private System.Windows.Forms.Button btnDocente;
         private System.Windows.Forms.Button btnAdmin;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button btnMostrar;
     }
 }

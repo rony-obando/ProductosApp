@@ -45,10 +45,10 @@
             this.cmbCategDocent = new System.Windows.Forms.ComboBox();
             this.nudHorasExtras = new System.Windows.Forms.NumericUpDown();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.lblCateg = new System.Windows.Forms.Label();
-            this.lblHoras = new System.Windows.Forms.Label();
             this.btnOk = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.lblCateg = new System.Windows.Forms.Label();
+            this.lblHoras = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudCodigo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSalario)).BeginInit();
@@ -69,6 +69,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(200, 20);
             this.txtNombre.TabIndex = 1;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtApellidos
             // 
@@ -76,6 +77,7 @@
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(200, 20);
             this.txtApellidos.TabIndex = 2;
+            this.txtApellidos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellidos_KeyPress);
             // 
             // nudCodigo
             // 
@@ -171,6 +173,7 @@
             // 
             // cmbCategDocent
             // 
+            this.cmbCategDocent.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategDocent.FormattingEnabled = true;
             this.cmbCategDocent.Items.AddRange(new object[] {
             "Titular",
@@ -201,26 +204,6 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(643, 75);
             this.flowLayoutPanel1.TabIndex = 16;
             // 
-            // lblCateg
-            // 
-            this.lblCateg.AutoSize = true;
-            this.lblCateg.Location = new System.Drawing.Point(137, 345);
-            this.lblCateg.Name = "lblCateg";
-            this.lblCateg.Size = new System.Drawing.Size(55, 13);
-            this.lblCateg.TabIndex = 17;
-            this.lblCateg.Text = "Categoria:";
-            this.lblCateg.Visible = false;
-            // 
-            // lblHoras
-            // 
-            this.lblHoras.AutoSize = true;
-            this.lblHoras.Location = new System.Drawing.Point(137, 345);
-            this.lblHoras.Name = "lblHoras";
-            this.lblHoras.Size = new System.Drawing.Size(70, 13);
-            this.lblHoras.TabIndex = 18;
-            this.lblHoras.Text = "Horas Extras:";
-            this.lblHoras.Visible = false;
-            // 
             // btnOk
             // 
             this.btnOk.Location = new System.Drawing.Point(3, 3);
@@ -240,6 +223,26 @@
             this.btnCancel.Text = "Cancelar";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
+            // 
+            // lblCateg
+            // 
+            this.lblCateg.AutoSize = true;
+            this.lblCateg.Location = new System.Drawing.Point(137, 345);
+            this.lblCateg.Name = "lblCateg";
+            this.lblCateg.Size = new System.Drawing.Size(55, 13);
+            this.lblCateg.TabIndex = 17;
+            this.lblCateg.Text = "Categoria:";
+            this.lblCateg.Visible = false;
+            // 
+            // lblHoras
+            // 
+            this.lblHoras.AutoSize = true;
+            this.lblHoras.Location = new System.Drawing.Point(137, 345);
+            this.lblHoras.Name = "lblHoras";
+            this.lblHoras.Size = new System.Drawing.Size(70, 13);
+            this.lblHoras.TabIndex = 18;
+            this.lblHoras.Text = "Horas Extras:";
+            this.lblHoras.Visible = false;
             // 
             // FrmEmpleado
             // 

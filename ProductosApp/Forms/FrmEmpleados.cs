@@ -26,7 +26,6 @@ namespace ProductosApp.Forms
         {
             FrmEmpleado si = new FrmEmpleado(empleadoModel,1);
             si.ShowDialog();
-            PrintEmpleado();
             
         }
 
@@ -41,14 +40,14 @@ namespace ProductosApp.Forms
             empleadoModel.Create(emp);*/
             FrmEmpleado si = new FrmEmpleado(empleadoModel, 0);
             si.ShowDialog();
-            PrintEmpleado();
+            
         }
         private void PrintEmpleado()
         {
             Empleado[] empleados = empleadoModel.GetEmpleados();
             if (empleados == null)
             {
-                //MessageBox.Show("Esta Vacio");
+                MessageBox.Show("No se ha ingresado datos");
                 return;
             }
             richTextBox1.Text = "";
@@ -57,10 +56,17 @@ namespace ProductosApp.Forms
                 richTextBox1.AppendText(e.GetEmpleadoAsString());
             }
         }
+        
 
         private void FrmEmpleados_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnMostrar_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Text = " ";
+            PrintEmpleado();
         }
     }
 }
