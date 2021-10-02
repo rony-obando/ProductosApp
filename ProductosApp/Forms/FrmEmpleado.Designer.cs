@@ -82,6 +82,11 @@
             // nudCodigo
             // 
             this.nudCodigo.Location = new System.Drawing.Point(257, 57);
+            this.nudCodigo.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
             this.nudCodigo.Name = "nudCodigo";
             this.nudCodigo.Size = new System.Drawing.Size(200, 20);
             this.nudCodigo.TabIndex = 3;
@@ -89,6 +94,11 @@
             // nudID
             // 
             this.nudID.Location = new System.Drawing.Point(257, 13);
+            this.nudID.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
             this.nudID.Name = "nudID";
             this.nudID.Size = new System.Drawing.Size(200, 20);
             this.nudID.TabIndex = 4;
@@ -96,7 +106,17 @@
             // nudSalario
             // 
             this.nudSalario.DecimalPlaces = 2;
+            this.nudSalario.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
             this.nudSalario.Location = new System.Drawing.Point(257, 245);
+            this.nudSalario.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.nudSalario.Name = "nudSalario";
             this.nudSalario.Size = new System.Drawing.Size(200, 20);
             this.nudSalario.TabIndex = 5;
@@ -190,6 +210,11 @@
             // 
             this.nudHorasExtras.DecimalPlaces = 2;
             this.nudHorasExtras.Location = new System.Drawing.Point(257, 343);
+            this.nudHorasExtras.Maximum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
             this.nudHorasExtras.Name = "nudHorasExtras";
             this.nudHorasExtras.Size = new System.Drawing.Size(200, 20);
             this.nudHorasExtras.TabIndex = 15;

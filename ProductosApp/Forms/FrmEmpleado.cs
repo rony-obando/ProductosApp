@@ -53,7 +53,7 @@ namespace ProductosApp.Forms
                 ValidateDate();
                 if (b==1)
                 {
-                    Empleado emp = new Docente((int)nudCodigo.Value, txtCedula.Text, txtNombre.Text, txtApellidos.Text, nudSalario.Value, dtpFechContr.Value)
+                    Empleado emp = new Docente((int)nudCodigo.Value, txtCedula.Text, txtNombre.Text, txtApellidos.Text, nudSalario.Value,dtpFechContr.Value.Date)
                     {
                         ID = (int)nudID.Value,
                         categoriaDocente=(CategoriaDocente)cmbCategDocent.SelectedIndex,
@@ -63,7 +63,7 @@ namespace ProductosApp.Forms
                 }
                 else
                 {
-                    Empleado emp = new Administrativo((int)nudCodigo.Value, txtCedula.Text, txtNombre.Text, txtApellidos.Text, nudSalario.Value, dtpFechContr.Value)
+                    Empleado emp = new Administrativo((int)nudCodigo.Value, txtCedula.Text, txtNombre.Text, txtApellidos.Text, nudSalario.Value, dtpFechContr.Value.Date)
                     {
                         ID = (int)nudID.Value,
                         HorasExtras = (float)nudHorasExtras.Value,
@@ -79,6 +79,8 @@ namespace ProductosApp.Forms
         }
         private void ValidateDate()
         {
+            string datetrue = dtpFechContr.Value.ToShortDateString();
+            string datenow = DateTime.Now.ToShortDateString();
             string patternDni = @"\d{3}-\d{6}-\d{4}[A-Z]{1}";
             if (b == 1)
             {
@@ -99,7 +101,7 @@ namespace ProductosApp.Forms
             {
                 throw new ArgumentException("Error, Introduzca un codigo");
             }
-            if (dtpFechContr.Value==DateTime.Now)
+            if (datenow==datetrue)
             {
                 throw new ArgumentException("Error, Introduzca una fecha de contratación");
             }
